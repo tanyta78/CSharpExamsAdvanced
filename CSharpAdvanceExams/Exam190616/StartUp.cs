@@ -8,13 +8,11 @@
     {
         private static void Main()
         {
-           var cube = new List<List<List<int>>>(); 
-
+            var cube = new List<List<List<int>>>();
         }
 
         public static void CubicRube()
         {
-            
         }
 
         public static void CubicArtilery()

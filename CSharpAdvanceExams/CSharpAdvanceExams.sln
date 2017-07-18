@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam280216Events", "Exam280
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam280216SUNumerals", "Exam280216SUNumerals\Exam280216SUNumerals.csproj", "{F7B6B35E-2739-4513-9BF0-B62ED3E5023A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam280216CollectResources", "Exam280216CollectResources\Exam280216CollectResources.csproj", "{A9E0D22F-789B-476D-A0BE-FFB9292A706B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{F7B6B35E-2739-4513-9BF0-B62ED3E5023A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B6B35E-2739-4513-9BF0-B62ED3E5023A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B6B35E-2739-4513-9BF0-B62ED3E5023A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E0D22F-789B-476D-A0BE-FFB9292A706B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E0D22F-789B-476D-A0BE-FFB9292A706B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E0D22F-789B-476D-A0BE-FFB9292A706B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E0D22F-789B-476D-A0BE-FFB9292A706B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

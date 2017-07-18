@@ -8,6 +8,7 @@
     {
         private static readonly IDictionary<string, int> winStatistics =
             new Dictionary<string, int>();
+
         private static readonly IDictionary<string, ISet<string>> opponentStatistics =
             new Dictionary<string, ISet<string>>();
 

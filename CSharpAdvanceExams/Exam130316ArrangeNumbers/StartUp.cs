@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Exam130316ArrangeNumbers
 {
@@ -22,7 +21,6 @@ namespace Exam130316ArrangeNumbers
               {7, "seven"},
               {8, "eigth"},
               {9, "nine"}
-
           };
 
             var inputNumbers = Console.ReadLine().Split(new[] { ' ', ',', '\t' }, StringSplitOptions.RemoveEmptyEntries)
@@ -46,10 +44,8 @@ namespace Exam130316ArrangeNumbers
                         var currentDigit = currentNumber % 10;
                         stackNumber.Push(currentDigit);
                         currentNumber = currentNumber / 10;
-
                     }
                 }
-
 
                 while (stackNumber.Count > 0)
                 {
@@ -62,7 +58,6 @@ namespace Exam130316ArrangeNumbers
                 sb.Clear();
             }
 
-
             foreach (var pair in result)
             {
                 sb.Append(pair.Value);
@@ -71,10 +66,6 @@ namespace Exam130316ArrangeNumbers
             sb.Length -= 2;
 
             Console.WriteLine(sb.ToString());
-
-
-
-
         }
 
         public static void AuthorD()
@@ -86,6 +77,4 @@ namespace Exam130316ArrangeNumbers
                     .OrderBy(str => string.Join(string.Empty, str.Select(ch => IntegerNames[ch - '0'])))));
         }
     }
-
-
 }

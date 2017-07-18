@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Exam130616JediDreams
@@ -31,10 +30,10 @@ namespace Exam130616JediDreams
 
                     if (!result.ContainsKey(currentMethod))
                     {
-                        result.Add(currentMethod,new List<string>());
+                        result.Add(currentMethod, new List<string>());
                     }
                 }
-                else if (regexForInsideMethods.IsMatch(inputLine) && currentMethod!=String.Empty)
+                else if (regexForInsideMethods.IsMatch(inputLine) && currentMethod != String.Empty)
                 {
                     var insidesMethodsMatches = regexForInsideMethods.Matches(inputLine);
 
@@ -42,7 +41,6 @@ namespace Exam130616JediDreams
                     {
                         result[currentMethod].Add(insidesMethodsMatch.Groups[1].Value);
                     }
-                   
                 }
             }
 
@@ -59,7 +57,6 @@ namespace Exam130616JediDreams
                 {
                     Console.WriteLine($"{pair.Key} -> None");
                 }
-               
             }
         }
     }

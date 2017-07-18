@@ -34,7 +34,6 @@ namespace Exam130616JediGalaxy
                 var currentEvilCol = evilCoordinates[1];
                 while (currentEvilRow >= 0 && currentEvilCol >= 0)
                 {
-                   
                     if (IsInMatrix(currentEvilCol, currentEvilRow, jediMatrix))
                     {
                         jediMatrix[currentEvilRow][currentEvilCol] = 0;
@@ -47,7 +46,6 @@ namespace Exam130616JediGalaxy
                 var currentIvoCol = ivoCoordinates[1];
                 while (currentIvoRow >= 0 && currentIvoCol < dimensions[1])
                 {
-                   
                     if (IsInMatrix(currentIvoCol, currentIvoRow, jediMatrix))
                     {
                         ivoPowers += jediMatrix[currentIvoRow][currentIvoCol];

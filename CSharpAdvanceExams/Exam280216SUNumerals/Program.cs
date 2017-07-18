@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exam280216SUNumerals
 {
@@ -11,7 +7,6 @@ namespace Exam280216SUNumerals
     {
         public static void Main(string[] args)
         {
-
             string[] keyConverter = new[] { "aa", "aba", "bcc", "cc", "cdc" };
             string result = String.Empty;
             string input = Console.ReadLine();

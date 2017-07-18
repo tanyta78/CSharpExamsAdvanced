@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Exam111015resultayManipulator
@@ -42,7 +41,7 @@ namespace Exam111015resultayManipulator
             var r = commands[2];
             int count = int.Parse(commands[1]);
             var reminder = r == "odd" ? 1 : 0;
-            if (count > numbers.Length )
+            if (count > numbers.Length)
             {
                 return "Invalid count";
             }
@@ -55,7 +54,6 @@ namespace Exam111015resultayManipulator
                 }
                 else
                 {
-                  
                     return commands[0] == "first"
                         ? "[" + string.Join(", ", filtered.Take(count)) + "]"
                         : "[" + string.Join(", ",
@@ -75,16 +73,16 @@ namespace Exam111015resultayManipulator
             }
             else
             {
-               return commands[0] == "max"
-                    ? Array.LastIndexOf(numbers,filtered.Max()).ToString()
-                    : Array.LastIndexOf(numbers, filtered.Min()).ToString();
+                return commands[0] == "max"
+                     ? Array.LastIndexOf(numbers, filtered.Max()).ToString()
+                     : Array.LastIndexOf(numbers, filtered.Min()).ToString();
             }
         }
 
         private static int[] ExchangeNumbers(int[] numbers, string s)
         {
             var index = int.Parse(s);
-            
+
             if (index >= numbers.Length || index < 0)
             {
                 Console.WriteLine("Invalid index");
@@ -92,9 +90,8 @@ namespace Exam111015resultayManipulator
             }
             else
             {
-               return numbers.Skip(index + 1).Concat(numbers.Take(index + 1)).ToArray();
+                return numbers.Skip(index + 1).Concat(numbers.Take(index + 1)).ToArray();
             }
-            
         }
     }
 }

@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Exam280216Events
 {
-   public class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -15,7 +13,7 @@ namespace Exam280216Events
             Regex rgx = new Regex(pattern);
             int lines = int.Parse(Console.ReadLine());
 
-            var eventsInfo = new SortedDictionary<string,SortedDictionary<string,List<string>>>();
+            var eventsInfo = new SortedDictionary<string, SortedDictionary<string, List<string>>>();
 
             for (int i = 0; i < lines; i++)
             {
@@ -29,18 +27,16 @@ namespace Exam280216Events
 
                     if (!eventsInfo.ContainsKey(evento))
                     {
-                        eventsInfo.Add(evento,new SortedDictionary<string, List<string>>());
+                        eventsInfo.Add(evento, new SortedDictionary<string, List<string>>());
                     }
 
                     if (!eventsInfo[evento].ContainsKey(name))
                     {
-                        eventsInfo[evento].Add(name,new List<string>());
+                        eventsInfo[evento].Add(name, new List<string>());
                     }
 
                     eventsInfo[evento][name].Add(time);
-
                 }
-                
             }
 
             var toPrint = Console.ReadLine().Split(',');
@@ -50,17 +46,15 @@ namespace Exam280216Events
                 var currentEvent = pair.Key;
                 if (toPrint.Contains(currentEvent))
                 {
-                    Console.WriteLine(currentEvent+":");
+                    Console.WriteLine(currentEvent + ":");
                     var count = 1;
                     foreach (var peoplePair in pair.Value)
                     {
-                        Console.WriteLine($"{count}. {peoplePair.Key} -> {string.Join(", ",peoplePair.Value.OrderBy(x=>x))}");
+                        Console.WriteLine($"{count}. {peoplePair.Key} -> {string.Join(", ", peoplePair.Value.OrderBy(x => x))}");
                         count++;
                     }
                 }
             }
-
-
         }
     }
 }

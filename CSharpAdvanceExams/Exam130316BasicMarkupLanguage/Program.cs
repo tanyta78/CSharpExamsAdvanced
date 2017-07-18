@@ -33,7 +33,6 @@ namespace Exam130316BasicMarkupLanguage
                     string forInverse = toInverse.Match(input).Groups[2].ToString();
                     if (forInverse == String.Empty)
                     {
-
                         input = Console.ReadLine();
                         sb.Clear();
                         continue;
@@ -57,7 +56,6 @@ namespace Exam130316BasicMarkupLanguage
                     string forReverse = toReverse.Match(input).Groups[2].ToString();
                     if (forReverse == String.Empty)
                     {
-
                         input = Console.ReadLine();
                         sb.Clear();
                         continue;
@@ -87,6 +85,7 @@ namespace Exam130316BasicMarkupLanguage
         }
 
         private static int lineIndex = 1;
+
         public static void AuthorD()
         {
             string pattern = @"\s*<\s*([a-z]+)\s+(?:value\s*=\s*""\s*(\d+)\s*""\s+)?[a-z]+\s*=\s*""([^""]*)""\s*\/>\s*";
@@ -102,9 +101,11 @@ namespace Exam130316BasicMarkupLanguage
                     case "inverse":
                         ProcessInverseTag(match.Groups[3].Value);
                         break;
+
                     case "reverse":
                         ProcessReverseTag(match.Groups[3].Value);
                         break;
+
                     case "repeat":
                         ProcessRepeatTag(match.Groups[3].Value, int.Parse(match.Groups[2].Value));
                         break;

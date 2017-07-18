@@ -21,14 +21,14 @@ namespace Exam130616JediCodeX
             string firstPattern = Console.ReadLine();
             string secondPattern = Console.ReadLine();
 
-            string patternForNames = 
-                Regex.Escape(firstPattern)+ @"([a-zA-Z]{" + firstPattern.Length + @"})(?![a-zA-Z])";
-            string patternForMessages =Regex.Escape(secondPattern)+ @"([a-zA-Z0-9]{"+secondPattern.Length+@"})(?![a-zA-Z0-9])";
+            string patternForNames =
+                Regex.Escape(firstPattern) + @"([a-zA-Z]{" + firstPattern.Length + @"})(?![a-zA-Z])";
+            string patternForMessages = Regex.Escape(secondPattern) + @"([a-zA-Z0-9]{" + secondPattern.Length + @"})(?![a-zA-Z0-9])";
 
-            Regex namesRegex=new Regex(patternForNames);
+            Regex namesRegex = new Regex(patternForNames);
             Regex messagesRegex = new Regex(patternForMessages);
 
-            var allNames =new List<string>();
+            var allNames = new List<string>();
             var allMessages = new List<string>();
 
             if (namesRegex.IsMatch(text.ToString()))
@@ -51,12 +51,12 @@ namespace Exam130616JediCodeX
             }
 
             var indexesForMessages = Console.ReadLine().Split().Select(int.Parse).ToList();
-         var result = new List<string>();
+            var result = new List<string>();
             var indexForJedi = 0;
             for (int i = 0; i < indexesForMessages.Count; i++)
             {
-                var currentIndex = indexesForMessages[i]-1;
-                if (indexForJedi>=allNames.Count)
+                var currentIndex = indexesForMessages[i] - 1;
+                if (indexForJedi >= allNames.Count)
                 {
                     break;
                 }
@@ -66,8 +66,8 @@ namespace Exam130616JediCodeX
                     indexForJedi++;
                 }
             }
-           
-            Console.WriteLine(string.Join("\n",result)); 
+
+            Console.WriteLine(string.Join("\n", result));
         }
     }
 }

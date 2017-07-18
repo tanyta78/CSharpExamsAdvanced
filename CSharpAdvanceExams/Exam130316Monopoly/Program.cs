@@ -97,7 +97,7 @@ namespace Exam130316Monopoly
                                 break;
 
                             case "S":
-                                var product = (colIndex + 1)* (rowIndex+1);
+                                var product = (colIndex + 1) * (rowIndex + 1);
                                 if (money < product)
                                 {
                                     Console.WriteLine($"Spent {money} money at the shop.");
@@ -147,11 +147,13 @@ namespace Exam130316Monopoly
                             Console.WriteLine($"Bought a hotel for {money}. Total hotels: {++numberOfHotels}.");
                             money = 0;
                             break;
+
                         case 'J':
                             Console.WriteLine($"Gone to jail at turn {turns}.");
                             turns += 2;
                             money += 2 * (numberOfHotels * 10);
                             break;
+
                         case 'S':
                             int columnIndex = row % 2 == 0 ? col : index;
                             int moneyToSpend = Math.Min((columnIndex + 1) * (row + 1), money);
@@ -167,6 +169,4 @@ namespace Exam130316Monopoly
             Console.WriteLine("Money " + money);
         }
     }
-
-
 }
